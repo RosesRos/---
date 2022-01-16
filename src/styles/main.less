@@ -1,0 +1,147 @@
+@import "~normalize.css";
+@import "fonts.less";
+@import "variables.less";
+@import "marketing.less";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+
+body {
+    font-family: @font_1, sans-serif;
+    font-size: 16px;
+    &.no-scroll{
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: 144rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin: 0 auto;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15.2rem;
+    height: 4.8rem;
+    background: @primary;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-style: normal;
+    color: @white;
+    transition: .2s all;
+    &:hover {
+        cursor: pointer;
+        background: #3458f5;
+    }
+    @media (max-width: @laptop) {
+        width: 13.1rem;
+    }
+    @media (max-width: @mobile) {
+        width: 100%;
+    }
+}
+
+.slick-list {
+    @media (max-width: @tablet) {
+        padding-right: 22%;
+    }
+    @media (max-width: @mobile-sm-landscape) {
+        padding-right: 6%;
+    }
+    @media (max-width: @mobile) {
+        padding-right: 5%;
+    }
+    
+    @media (max-width: @mobile-sm) {
+        padding-right: 1.5%;
+    }
+}
+
+
+.slick-prev {
+    display: grid;
+    place-items: center;
+    background: #F6F6F6;
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 100%;
+    top: -3.7rem;
+    left: 94%;
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        background-image: url(../assets/Arrow_left.png);
+        position: absolute;
+        top: calc(50% - 1rem);
+    }
+    &:hover {
+        background: #c9c7c7;
+    }
+    @media (max-width: @desktop) {
+        left: 91%;
+    }
+    @media (max-width: @tablet) {
+        left: 90%;
+    }
+    @media (max-width: @mobile-sm-landscape) {
+        left: 83%;
+    }
+    @media (max-width: @mobile) {
+        visibility: hidden;
+    }
+}
+
+.slick-next {
+    display: grid;
+    place-items: center;
+    background: #F6F6F6;
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 100%;
+    right: 1%;
+    top: -3.7rem;
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        background-image: url(../assets/Arrow_right.png);
+        position: absolute;
+        top: calc(50% - 1rem);
+    }
+    &:hover {
+        background: #c9c7c7;
+    }
+    @media (max-width: @desktop) {
+        right: 2%;
+    }
+    @media (max-width: @mobile-landscape) and (orientation: landscape) {
+        right: 2%;
+    }
+    @media (max-width: @mobile-sm-landscape) {
+        right: 6%;
+    }
+    @media (max-width: @mobile) {
+        visibility: hidden;
+    }
+}
